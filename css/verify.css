@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Bar */
+#topbar {
+    background-color: #212529;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#topbar .contact-info {
+    margin-right: auto;
+}
+
+#topbar .contact-info i {
+    margin-right: 5px;
+}
+
+#topbar .social-links a {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* Header */
+#header {
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+
+
+/* Login Form */
+.login-form {
+    margin-top: 50px;
+}
+
+.login-form .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form .card-header {
+    text-align: center;
+    padding: 0px;
+    background-color: #008374;
+    color: white;
+    font-size: 18px;
+}
+
+.login-form .card-body {
+    padding: 10px;
+}
+
+.login-form label {
+    margin-bottom: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 50%;
+    height: 40px;
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form input[type="submit"] {
+    background-color: #008374;
+    color: white;
+    margin-bottom: 15px;
+    margin-left: 18px;
+    font-size: 20px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+    
+    .login-form input[type="submit"]:hover {
+        background-color: #f12015;
+    }
+

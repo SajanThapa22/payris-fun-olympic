@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: #66991a; 
+    font-size: 20px;
+
+  }
+  
+  .navbar-brand {
+    color: #fff; /* Change this color as needed */
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff; 
+  }
+
+  img.img-fluid {
+    width: 100%;
+    height: auto;
+  }
+  
+ 
+  .contact {
+    padding: 50px 0;
+    background-color: #b7c0b3; /* Change this color as needed */
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333; /* Change this color as needed */
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+  }
+  
+   .contact-form,
+  .contact-info {
+    flex: 1;
+    max-width: 40%; 
+    margin-top: 20px;
+  } 
+  
+  .form-group {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+   text-transform: capitalize;
+    font-size: 20px;
+    color: #555; /* Change this color as needed */
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #6293a2;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #a6472d; /* Change this color as needed */
+    color: #fff; /* Change this color as needed */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+    font-size: 20px; 
+  }
+  
+  
+   .contact-info {
+    background-color: #fff; 
+    padding: 20px; 
+     flex: 1;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+    text-align: left;
+    margin-left: 70%;
+   }
+
+  /* Footer styling */
+  .site-footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px 0;
+  }
+  
+ 

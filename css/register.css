@@ -1,0 +1,68 @@
+/* Signup css */
+/* Container styling */
+.container-fluid {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Panel styling */
+.panel-info {
+    border: 1px solid #5bc0de; /* Panel border color */
+    border-radius: 5px; /* Optional: Add border-radius for a rounded look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box-shadow for a subtle depth effect */  
+}
+
+.panel-heading:hover{
+    box-shadow: 5px 0px 40px rgba(0,0,0, .3);
+}
+
+
+.panel-heading{
+    background-color: #2b434a;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Panel heading styling */
+.panel-heading h2 {
+    margin: 0;
+    color: azure;
+}
+
+/* Form styling */
+.form-group {  
+    padding: 0px 5px 3px 10px;
+}
+
+/* Optional: Add border-radius for a rounded look */
+.form-control,
+.btn {
+    border-radius: 5px;
+}
+
+.card{
+    margin-bottom: 20px;
+    
+}
+
+.card img{
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-title{
+    font-size: 1.5rem;
+}
+
+.card-text{
+    color: #555;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
