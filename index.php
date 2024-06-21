@@ -90,7 +90,7 @@ footer{
   display: flex;
   background-color: #dc2626;
   margin-top: 20px;
-  padding: 30px 20px;
+  padding: 30px 24px;
   gap: 20px;
   justify-content: center;
 }

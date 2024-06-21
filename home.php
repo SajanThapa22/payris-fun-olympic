@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("location:login.php");
+    exit;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -90,7 +97,7 @@ footer{
   display: flex;
   background-color: #dc2626;
   margin-top: 20px;
-  padding: 30px 20px;
+  padding: 30px 24px;
   gap: 20px;
   justify-content: center;
 }
