@@ -32,8 +32,8 @@ else
 
 <section>
     <h1 class="heading" style="font-size: 30px; color: #333; margin-top: 20px; font-weight: bold;">User Comments</h1>
-    <div1 class="col-md-12 ">
-        <div1>
+    <div class="col-md-12 ">
+        <p style="font-size: 16px">Boxing comments</p>
             <table style="font-size: 15px; border-radius: 15px; border-collapse: collapse; width: 100%; border: 1px solid #efefef;">
                 <thead class="bg-light text-dark">
                     <tr>
@@ -42,14 +42,13 @@ else
                         <th>Comment</th>
                         <th>Date</th>
                         <th>Rate</th>
-                        <th>Edit</th>
                         <th>Delete</th>
 
                     </tr>
                 </thead>
                 <?php
                 include '../config/connection.php';
-                $query="select * from comment";
+                $query="select * from boxingcomment";
                 $run=mysqli_query($conn,$query);
                 while($row=mysqli_fetch_array($run))
                 {
@@ -66,10 +65,7 @@ else
                         <td><?php echo $d; ?></td>
                         <td><?php echo $c; ?></td>
                         <td><?php echo $e; ?></td>
-                        <td><a class="btn bg-primary"
-                                href="comment-edit.php?id=<?php echo $a; ?>&user=<?php echo $b; ?>&date=<?php echo $c; ?>&comment=<?php echo $d; ?>&rate=<?php echo $e; ?>">Edit</a>
-                        </td>
-                        <td><a class="btn bg-danger" href="comment-delete.php?Del=<?php echo $a; ?>">Delete</a></td>
+                        <td><a class="btn bg-danger" href="comment-delete.php?Del=<?php echo $a; ?>&table=boxingcomment">Delete</a></td>
 
                     </tr>
                 </tbody>
@@ -78,6 +74,140 @@ else
                 ?>
             </table>
             </div>
+
+
+            <div style="margin-top: 50px" class="col-md-12">
+        <p style="font-size: 16px">Table Tennis comments</p>
+            <table style="font-size: 15px; border-radius: 15px; border-collapse: collapse; width: 100%; border: 1px solid #efefef;">
+                <thead class="bg-light text-dark">
+                    <tr>
+                        <th>Comment ID</th>
+                        <th>Username</th>
+                        <th>Comment</th>
+                        <th>Date</th>
+                        <th>Rate</th>
+                        <th>Delete</th>
+
+                    </tr>
+                </thead>
+                <?php
+                include '../config/connection.php';
+                $query="select * from ttcomment";
+                $run=mysqli_query($conn,$query);
+                while($row=mysqli_fetch_array($run))
+                {
+                    $a=$row['id'];
+                    $b=$row['user'];
+                    $c=$row['date'];
+                    $d=$row['comment'];
+                    $e=$row['rate'];
+                ?>
+                <tbody class="bg-white">
+                    <tr>
+                        <td scope="row"><?php echo $a; ?></td>
+                        <td><?php echo $b; ?></td>
+                        <td><?php echo $d; ?></td>
+                        <td><?php echo $c; ?></td>
+                        <td><?php echo $e; ?></td>
+                        <td><a class="btn bg-danger" href="comment-delete.php?Del=<?php echo $a; ?>&table=ttcomment">Delete</a></td>
+
+                    </tr>
+                </tbody>
+                <?php 
+                }
+                ?>
+            </table>
+            </div>
+
+
+            <div style="margin-top: 50px" class="col-md-12">
+        <p style="font-size: 16px">Archery comments</p>
+            <table style="font-size: 15px; border-radius: 15px; border-collapse: collapse; width: 100%; border: 1px solid #efefef;">
+                <thead class="bg-light text-dark">
+                    <tr>
+                        <th>Comment ID</th>
+                        <th>Username</th>
+                        <th>Comment</th>
+                        <th>Date</th>
+                        <th>Rate</th>
+                        <th>Delete</th>
+
+                    </tr>
+                </thead>
+                <?php
+                include '../config/connection.php';
+                $query="select * from archerycomment";
+                $run=mysqli_query($conn,$query);
+                while($row=mysqli_fetch_array($run))
+                {
+                    $a=$row['id'];
+                    $b=$row['user'];
+                    $c=$row['date'];
+                    $d=$row['comment'];
+                    $e=$row['rate'];
+                ?>
+                <tbody class="bg-white">
+                    <tr>
+                        <td scope="row"><?php echo $a; ?></td>
+                        <td><?php echo $b; ?></td>
+                        <td><?php echo $d; ?></td>
+                        <td><?php echo $c; ?></td>
+                        <td><?php echo $e; ?></td>
+                        <td><a class="btn bg-danger" href="comment-delete.php?Del=<?php echo $a; ?>&table=archerycomment">Delete</a></td>
+
+                    </tr>
+                </tbody>
+                <?php 
+                }
+                ?>
+            </table>
+            </div>
+
+
+            <div style="margin-top: 50px" class="col-md-12">
+        <p style="font-size: 16px">Swimming comments</p>
+            <table style="font-size: 15px; border-radius: 15px; border-collapse: collapse; width: 100%; border: 1px solid #efefef;">
+                <thead class="bg-light text-dark">
+                    <tr>
+                        <th>Comment ID</th>
+                        <th>Username</th>
+                        <th>Comment</th>
+                        <th>Date</th>
+                        <th>Rate</th>
+                        <th>Delete</th>
+
+                    </tr>
+                </thead>
+                <?php
+                include '../config/connection.php';
+                $query="select * from swimmingcomment";
+                $run=mysqli_query($conn,$query);
+                while($row=mysqli_fetch_array($run))
+                {
+                    $a=$row['id'];
+                    $b=$row['user'];
+                    $c=$row['date'];
+                    $d=$row['comment'];
+                    $e=$row['rate'];
+                ?>
+                <tbody class="bg-white">
+                    <tr>
+                        <td scope="row"><?php echo $a; ?></td>
+                        <td><?php echo $b; ?></td>
+                        <td><?php echo $d; ?></td>
+                        <td><?php echo $c; ?></td>
+                        <td><?php echo $e; ?></td>
+                        <td><a class="btn bg-danger" href="comment-delete.php?Del=<?php echo $a; ?>&table=swimmingcomment">Delete</a></td>
+
+                    </tr>
+                </tbody>
+                <?php 
+                }
+                ?>
+            </table>
+            </div>
+
+
             <!-- dashboard end -->
             </body>
 

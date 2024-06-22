@@ -1,9 +1,10 @@
 <?php
 include '../config/connection.php';
-if(isset($_GET['Del']))
+if(isset($_GET['Del']) && isset($_GET['table']))
 {
     $delid=$_GET['Del'];
-    $query="delete from comment where id='$delid'";
+    $table = mysqli_real_escape_string($conn, $_GET['table']);
+    $query="delete from $table where id='$delid'";
     $run=mysqli_query($conn,$query);
     if($run)
     {
