@@ -68,8 +68,7 @@ include 'config/connection.php';
                                     <div class="notification">
                                         <i class="fas fa-info-circle notification-icon"></i>
                                         <span class="notification-text">
-                                            A verification email will be sent to your Email Address.
-                                            Please check it to get a link to reset your password.
+                                            A verification mail has been sent to your email address. Please kindly check it.
                                         </span>
                                     </div>
                                 </div>

@@ -19,7 +19,7 @@ if (isset($_POST["register"])) {
         if ($rowCount > 0) {
             ?>
             <script>
-                alert("Email already registered!");
+                alert("Email has been already registered!");
             </script>
             <?php
         } else {
