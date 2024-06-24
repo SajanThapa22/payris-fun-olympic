@@ -40,7 +40,7 @@ session_start();
         <div class="col-md-1">
         </div>
         <div class="col-md-10">
-          <h2 class="display-4">If you forgot your password. Enter your valid mail id to reset your password.</h2>
+          <h2 class="display-4">Forgot password? Please provide your correct email address</h2>
           <form action="" method="post">
             <div class="form-group">
               <label for="email">Your Email:</label>
