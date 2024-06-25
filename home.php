@@ -117,7 +117,7 @@ ul{
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <body>
-<!-- navbar start -->
+<!-- this is navigation bar -->
 <nav>
     <div style="display: flex;width:100%;justify-content: space-between; align-items: center; gap: 40px">
       <a href="home.php"><img src="img/logowithnobg.png"style="width:110px;height:70px;object-fit:cover;" alt=""></a>
@@ -140,9 +140,9 @@ ul{
     </div>
 
   </nav>
-<!-- navbar end -->
+<!--this is navigation bar -->
 
- <!-- slide start -->
+ <!-- this is banner -->
  <div class="w-full h-screen overflow-hidden relative">
     <img src="img/boxing.jpg" style="width:100%;height:100%" alt="">
     <div style="position:absolute;top:50%;right:50%;transform:translate(50%,90%);display:grid;gap:24px" >
@@ -150,9 +150,11 @@ ul{
       <p style="font-size: 40px;text-wrap:nowrap;color:white;font-weight:700;">are you ready for the most famous sporting event</p>
     </div>
   </div>
-  <!-- Carousel End -->
+  <!-- this is banner -->
 
-  <!-- About Section Start -->
+
+  <!-- This is about section-->
+
   <div id="container">
     <div style="display:flex;flex-direction:column;margin-top:20px;width:100%">
       <div style="display:grid;grid-template-columns: 1fr;width:100$">
@@ -170,10 +172,8 @@ ul{
     </div>
   </div>
 
-  <!-- About Section End -->
 
-
-   <!-- games section start-->
+   <!-- this is games section -->
         <div id="gamebox">
             <div id="gametitle" style="margin-bottom: 16px" >
                 <h1 class="explore">Explore Our <span class="title">Games</span></h1>
@@ -269,15 +269,13 @@ ul{
                 
             </div>
         </div>
-    <!-- games section end -->
 
-    <!-- Footer Start -->
+    <!-- This is footer -->
     <footer>
         <p style="color:white"> Payris Fun Olympics 2024.</p>
         <p style="color:white">Copyright &copy; All rights reserved.</p>
 
     </footer>
-    <!-- Footer End -->
 
 </body>
 
