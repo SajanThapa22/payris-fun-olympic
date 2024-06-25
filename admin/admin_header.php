@@ -1,4 +1,4 @@
-<!-- header section starts -->
+
     <header class="header">
     <section id="header">
         <img src="../images/dashboard/logowithnobg.png" style="height: 60px; width: 80px;" alt="">
@@ -12,9 +12,9 @@
     body.classList.toggle('dark-theme');
   }
 </script>
-<!-- header section ends -->
 
-<!-- side bar section starts  -->
+
+
 <div class="side-bar bg-light">
 
     <div class="close-side-bar">
@@ -37,7 +37,7 @@
 
 </div>
 
-<!-- side bar section ends -->
+
 
 
 <style>
