@@ -82,24 +82,10 @@ if (isset($_POST["register"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <title>Payris FunOlympic 2024</title>
+    <title>Payris 2024 2024</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="public/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
-    <script src="js/login.js"></script>
+    
     <style>
         body{
         background-color: #d3d3d3;
@@ -202,18 +188,18 @@ if (isset($_POST["register"])) {
                             <div class="flex flex-col gap-2">
                                 <label for="country"><strong>Country:</strong></label>
                                 <div>
-                                    <select id="country" name="country" required
+                                    <select name="country" required
                                         style="width: 100%; height: 40px; margin-top: 5px; padding: 5px">
                                         <option value="" selected disabled>Select your Country</option>
-                                        <option value="Nepal">Argentina</option>
-                                        <option value="Korea">Australia</option>
-                                        <option value="India">Bangladesh</option>
-                                        <option value="Vietnam">Canada</option>
-                                        <option value="United Kingdom">Nepal</option>
-                                        <option value="Indonesia">Pakistan</option>
-                                        <option value="United States">South Africa</option>
-                                        <option value="China">South Korea</option>
-                                        <option value="Japan">UAE</option>
+                                        <option value="Argentian">Argentina</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Bangladesh">Bangladesh</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Nepal">Nepal</option>
+                                        <option value="Pakistan">Pakistan</option>
+                                        <option value="South Africa">South Africa</option>
+                                        <option value="South Korea">South Korea</option>
+                                        <option value="UAE">UAE</option>
                                     </select>
                                 </div>
                             </div>
@@ -223,10 +209,10 @@ if (isset($_POST["register"])) {
                                     <select id="sports" name="sports" required
                                         style="width: 100%; height: 40px; margin-top: 5px; padding: 5px">
                                         <option value="" selected disabled>Select your favourite Sports</option>
-                                        <option value="football">Archery</option>
-                                        <option value="volleyball">Boxing</option>
+                                        <option value="archery">Archery</option>
+                                        <option value="boxing">Boxing</option>
                                         <option value="swimming">swimming</option>
-                                        <option value="basketball">Table Tennis</option>
+                                        <option value="tabletennis">Table Tennis</option>
                                         <option value="others">Others</option>
                                     </select>
                                 </div>
