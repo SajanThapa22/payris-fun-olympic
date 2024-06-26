@@ -263,7 +263,6 @@ ul{
     <footer>
         <p style="color:white"> Payris Fun Olympics 2024.</p>
         <p style="color:white">Copyright &copy; All rights reserved.</p>
-
     </footer>
 
 </body>

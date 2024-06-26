@@ -78,19 +78,14 @@ if (!isset($_SESSION['username'])) {
         }
 
 
-        .footer {
-            background-color: #212529;
-            color: #fff;
-            padding: 60px 0;
-        }
-
-        .footer a {
-            color: #fff;
-        }
-
-        .footer a:hover {
-            color:#a82121;
-        }
+        footer{
+  display: flex;
+  background-color: #dc2626;
+  margin-top: 20px;
+  padding: 30px 24px;
+  gap: 20px;
+  justify-content: center;
+}
         #gamebox{
   display: grid;
   justify-content: center;
@@ -313,31 +308,9 @@ a:hover{
 
 
     <!-- ======= Footer ======= -->
-    <footer style="background-color: #dc2626;margin-top;30px; padding: 20px 30px;display:grid;grid-template-columns:2fr 1fr 1fr;gap-30px;justify-content:center;color:white">
-        <div>
-                <p>Stay connected with us for the latest updates and news about the olympics games. Join theconversation using Fun Olympics 2024 Website.</p>
-         <div>
-    <a href="#" class="twitter" style="margin-right: 4px;"><i class="bi bi-twitter"></i></a>
-    <a href="#" class="facebook" style="margin-right: 4px;"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="instagram" style="margin-right: 6px;"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-</div>
-</div>
-
-<div>
-                    <h4>Contact Us</h4>
-                    <p>
-                        Stade de France <br> City of paris,<br> payris <br><br>
-                    Phone: +1-123-456-7899<br>
-                    Email: info@funolympic2024.com<br>
-                    </p>
-
-                </div>
-
-                <div class="copyright">
-                &copy;Copyrights Payris 2024  all Rights Reserved
-            </div>
-
+    <  <footer>
+        <p style="color:white"> Payris Fun Olympics 2024.</p>
+        <p style="color:white">Copyright &copy; All rights reserved.</p>
     </footer>
         </div>
         

@@ -80,19 +80,14 @@ if (!isset($_SESSION['username'])) {
         }
 
 
-        .footer {
-            background-color: #212529;
-            color: #fff;
-            padding: 60px 0;
-        }
-
-        .footer a {
-            color: #fff;
-        }
-
-        .footer a:hover {
-            color:#a82121;
-        }
+        footer{
+  display: flex;
+  background-color: #dc2626;
+  margin-top: 20px;
+  padding: 30px 24px;
+  gap: 20px;
+  justify-content: center;
+}
         #gamebox{
   display: grid;
   justify-content: center;
