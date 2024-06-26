@@ -14,30 +14,29 @@ session_start();
             $login_error = '<p style="text-align: center; color: #FF0000; margin-right: 240px; font-size: 16px;"><i class="fas fa-exclamation-circle"></i> Please enter your password.</p>';
         } else {
 
-              // Default admin credentials
+              // this is default admin login details
         $default_admin_username = "admin";
         $default_admin_password = "password";
 
         if ($username === $default_admin_username && $password === $default_admin_password) {
-            // Default admin credentials matched, redirect to admin panel
             $_SESSION['username'] = $username;
             header("Location: admin/main.php");
             exit();
 
         } else {
 
-            // Process login non-empty username and password
+            // login authentication
             $sql = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
             $count = mysqli_num_rows($sql);
     
                 $sql1 = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
-                $count1 = mysqli_num_rows($sql1);
+                $checker = mysqli_num_rows($sql1);
     
-                if ($count1 > 0) {
-                    $fetch1 = mysqli_fetch_assoc($sql1);
-                    $hashpassword1 = $fetch1["password"];
+                if ($checker > 0) {
+                    $getter = mysqli_fetch_assoc($sql1);
+                    $hashpassword1 = $getter["password"];
     
-                    if ($fetch1["status"] == 0) {
+                    if ($getter["status"] == 0) {
                         $login_error = '<p style="text-align: center; color: #FF0000; margin-right: 100px; font-size: 16px;"><i class="fas fa-exclamation-circle"></i> Please verify your email account before logging in.</p>';
                     } elseif (password_verify($password, $hashpassword1)) {
                         $_SESSION['username'] = $username;

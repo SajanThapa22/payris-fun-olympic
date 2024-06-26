@@ -164,12 +164,12 @@ if (isset($_POST["register"])) {
   </nav>
 
 
-    <!-- Signup panel start -->
+    <!-- This is sign up/ register form for users-->
    
                 <div id="box">
 
                     <div>
-                        <h2>Register</h2>
+                        <h2>Register here</h2>
                     </div>
 
                     <div>
@@ -205,15 +205,15 @@ if (isset($_POST["register"])) {
                                     <select id="country" name="country" required
                                         style="width: 100%; height: 40px; margin-top: 5px; padding: 5px">
                                         <option value="" selected disabled>Select your Country</option>
-                                        <option value="Nepal">Nepal</option>
-                                        <option value="United States">United States (USA)</option>
-                                        <option value="India">India</option>
-                                        <option value="United Kingdom">United Kingdom (UK)</option>
-                                        <option value="China">China</option>
-                                        <option value="Japan">Japan</option>
-                                        <option value="Korea">newzealand</option>
-                                        <option value="Vietnam">Netherland</option>
-                                        <option value="Indonesia">Indonesia</option>
+                                        <option value="Nepal">Argentina</option>
+                                        <option value="Korea">Australia</option>
+                                        <option value="India">Bangladesh</option>
+                                        <option value="Vietnam">Canada</option>
+                                        <option value="United Kingdom">Nepal</option>
+                                        <option value="Indonesia">Pakistan</option>
+                                        <option value="United States">South Africa</option>
+                                        <option value="China">South Korea</option>
+                                        <option value="Japan">UAE</option>
                                     </select>
                                 </div>
                             </div>
@@ -223,11 +223,10 @@ if (isset($_POST["register"])) {
                                     <select id="sports" name="sports" required
                                         style="width: 100%; height: 40px; margin-top: 5px; padding: 5px">
                                         <option value="" selected disabled>Select your favourite Sports</option>
-                                        <option value="football">Football</option>
-                                        <option value="volleyball">Volleyball</option>
-                                        <option value="basketball">Basketball</option>
+                                        <option value="football">Archery</option>
+                                        <option value="volleyball">Boxing</option>
                                         <option value="swimming">swimming</option>
-                                        <option value="hockey">Hockey</option>
+                                        <option value="basketball">Table Tennis</option>
                                         <option value="others">Others</option>
                                     </select>
                                 </div>
