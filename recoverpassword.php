@@ -99,7 +99,7 @@ include 'config/connection.php';
         if(mysqli_num_rows($sql) <= 0){
             ?>
 <script>
-alert("<?php  echo "Sorry, no emails exists "?>");
+alert("<?php  echo "The email you provided doesn't exist"?>");
 </script>
 <?php
         }else if($fetch["status"] == 0){
@@ -110,10 +110,8 @@ window.location.replace("login.php");
 </script>
 <?php
         }else{
-            // generate token by binaryhexa 
             $token = bin2hex(random_bytes(50));
 
-            //session_start ();
             $_SESSION['token'] = $token;
             $_SESSION['email'] = $email;
 
@@ -126,13 +124,10 @@ window.location.replace("login.php");
             $mail->SMTPAuth=true;
             $mail->SMTPSecure='tls';
 
-            // Gmail account
             $mail->Username='sajanthapa1888@gmail.com';
             $mail->Password = 'eqlw qkgq byfz abcu';
 
-            // send by  email
             $mail->setFrom('sajanthapa1888@gmail.com', 'Password Reset');
-            // get email from input
             $mail->addAddress($_POST["email"]);
             $mail->addReplyTo('sajanthapa1888@gmail.com.com');
 

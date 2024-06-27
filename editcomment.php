@@ -18,7 +18,6 @@ if(!isset($_SESSION['username']))
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- comment start  -->
     <div class="container" style="margin: 30px 0px; margin-left: 300px;">
         <h2 class= "display-6">Edit comment:</h2>
         <form action="" method="post" enctype="multipart/form-data">
@@ -29,8 +28,6 @@ if(!isset($_SESSION['username']))
             </div>
             <div class="form-group" style="margin: 30px 0px;">
                 <label for="Rating">Rating:</label>
-                <!-- <input type="text" class="form-control" name="rate" id="" aria-describedby="helpId"
-                    placeholder="1 to 5" style="width: 60%;"> -->
 
                     <select style="width: 200px" type="text" name="rate" placeholder='select your rating'>
                     <option value="1">1</option>
@@ -57,7 +54,8 @@ if (isset($_POST['submit'])) {
 
     if (isset($_GET['id'])) {
         $id = intval($_GET['id']);
-    // Update the existing comment
+
+
     $query = "UPDATE $table SET comment = '$com', rate = $rate, date = '$date' WHERE id = $id AND user = '$user'";
     $run = mysqli_query($conn, $query);
     

@@ -16,7 +16,6 @@ if (isset($_GET['id']) && isset($_GET['table']) && isset($_GET['redirect'])) {
    
     $query = "DELETE FROM $table WHERE id = '$comment_id'";
 
-    // Execute the query
     $result = mysqli_query($conn, $query);
 
     if ($result) {
