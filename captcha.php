@@ -54,7 +54,7 @@ for($i = 0; $i < $string_length; $i++) {
   imagettftext($image, 36, rand(-15, 45), $initial + $i*$letter_space, rand(55, 100), $textcolors[rand(0, 1)], $fonts[array_rand($fonts)], $captcha_string[$i]);
 }
 
-// Set the content type
+
 header('Content-Type: image/png');
 header('Cache-Control: no-cache');
 
