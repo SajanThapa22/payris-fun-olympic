@@ -127,14 +127,14 @@ window.location.replace("login.php");
             $mail->SMTPSecure='tls';
 
             // Gmail account
-            $mail->Username='pathakhari496@gmail.com';
-            $mail->Password='lwbf tizz tcek zmov';
+            $mail->Username='sajanthapa1888@gmail.com';
+            $mail->Password = 'eqlw qkgq byfz abcu';
 
             // send by  email
-            $mail->setFrom('pathakhari496@gmail.com', 'Password Reset');
+            $mail->setFrom('sajanthapa1888@gmail.com', 'Password Reset');
             // get email from input
             $mail->addAddress($_POST["email"]);
-            $mail->addReplyTo('pathakhari496@gmail.com.com');
+            $mail->addReplyTo('sajanthapa1888@gmail.com.com');
 
             // HTML body
             $mail->isHTML(true);

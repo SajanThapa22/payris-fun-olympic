@@ -101,6 +101,7 @@ session_start();
                 };
 
                 xhr.send();
+                captcha
 
             });
         });
