@@ -104,7 +104,7 @@ ul{
 <!-- this is navigation bar-->
 <nav>
     <div style="display: flex;width:100%;justify-content: space-between; align-items: center; gap: 40px">
-      <a href="home.php"><img src="img/logowithnobg.png"style="width:110px;height:70px;object-fit:cover;" alt=""></a>
+      <a href="home.php"><img src="img/funOlympicLogo.png"style="width:110px;height:70px;object-fit:cover;" alt=""></a>
       
       <div id="mynav" style="display:flex;flex:1;justify-content: space-between;align-items: center;gap:64px">
         <ul style="list-style-type:none;display:flex;gap:32px; align-items:center">

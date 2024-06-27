@@ -52,7 +52,7 @@ else
             <div class="box bg-light">
             <?php 
                 include '../config/connection.php';
-                $query="select * from comment";
+                $query="select * from ttcomment";
                 $result=mysqli_query($conn,$query);
                 if($result)
                 {

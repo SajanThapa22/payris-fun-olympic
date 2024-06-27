@@ -35,7 +35,7 @@
    <!-- navbar start -->
    <nav class="flex px-6 py-3 lg:px-10 lg:py-4">
     <div class="flex w-full justify-between items-center gap-5">
-      <a href="home.php"><img src="img/logowithnobg.png" class="w-14 h-10 lg:w-28 lg:h-16 object-cover" alt=""></a>
+      <a href="home.php"><img src="img/funOlympicLogo.png" class="w-14 h-10 lg:w-28 lg:h-16 object-cover" alt=""></a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
         <span class="navbar-toggler-icon"></span>
       </button>

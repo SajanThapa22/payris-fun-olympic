@@ -8,7 +8,7 @@ if(isset($_GET['Del']) && isset($_GET['table']))
     $run=mysqli_query($conn,$query);
     if($run)
     {
-        header("location:view-comment.php");
+        header("location:user-comments.php");
     }
     else
     {

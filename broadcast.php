@@ -176,7 +176,7 @@ a{
     
 <nav>
     <div style="display:flex;width: 100%;justify-content:space-between;align-items:center;gap:20px">
-      <a href="home.php"><img src="img/logowithnobg.png" alt=""></a>
+      <a href="home.php"><img src="img/funOlympicLogo.png" alt=""></a>
       <div id="mynav" style="display:flex; gap: 56px;align-items:center;justify-content:center">
         <ul style="list-style-type:none;display:flex;gap:32px; align-items:center">
           <li ><a class=" text-black" href="home.php">Home</a></li>
