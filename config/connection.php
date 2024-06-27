@@ -2,7 +2,7 @@
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="olyampics";
+$dbname="funOlympics.sql";
 $conn=mysqli_connect($servername,$username,$password,$dbname);
 ?>
 
