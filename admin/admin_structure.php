@@ -27,7 +27,7 @@
         <a href="registered-users.php" class="nav-link"><span class="text-black">Users</span></a>
         <a href="post-video.php" class="nav-link"><span class="text-black">Upload Videos</span></a>
         <a href="user-comments.php" class="nav-link"><span class="text-black">Comments</span></a>
-        <a href="../index.php"  onclick="return confirm('Do you want to log out?');"style="text-decoration: none;"><span class="text-black">Logout</span></a>
+        <a href="admin-logout.php"  onclick="return confirm('Do you want to log out?');"style="text-decoration: none;"><span class="text-black">Logout</span></a>
     </nav>
 
 </div>

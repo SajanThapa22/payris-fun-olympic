@@ -15,7 +15,7 @@ else
 
 </head>
 
-<?php include 'admin_header.php'; ?>
+<?php include 'admin_structure.php'; ?>
 
 
 <section>

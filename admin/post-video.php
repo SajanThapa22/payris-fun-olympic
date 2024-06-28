@@ -32,7 +32,7 @@ else
 </head>
 
 <body>
-    <?php include 'admin_header.php'; ?>
+    <?php include 'admin_structure.php'; ?>
 
     <section class="">
         <h1 class="heading" style="font-size: 30px; color: #333; margin-top: 20px; text-align:center; font-weight: bold;">Upload Video</h1>
