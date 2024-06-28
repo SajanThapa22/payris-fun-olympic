@@ -11,71 +11,17 @@ if (!isset($_SESSION['username'])) {
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Olympic Website</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Payris Fun Olympics</title>
     
-
-
 </head>
 
 <body style="display: grid; ">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 300,
-            duration: 1300,
-        }
-        ); 
-    </script>
-
     <style>
-        .checked {
-            color: orange;
-        }
-
         body {
             background-color: #DCDCDC;
-            font-family: 'Open Sans', sans-serif;
+            font-family: sans-serif;
         }
 
-
-        #contact {
-            padding: 60px 0;
-        }
-
-        #contact h2 {
-            color: paleturquoise;
-            color: #be6231;
-            font-size: 36px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-
-
-
-        .container form textarea {
-            width: 60%;
-        }
 
         footer{
   display: flex;
@@ -158,9 +104,9 @@ a:hover{
     
 
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
+    <section>
+        <div>
+            <div>
                 <h2 style="color: black; font-size: 32px;">Watch  <span style="color: #dc2626; font-size: 32px;">
                 live broadcast
                 </span></h2>
@@ -196,19 +142,17 @@ a:hover{
 
     
 
-    <!-- comment start  -->
-    <div class="container" style="margin: 30px 0px; margin-left: 250px;">
-        <h2 class="display-6">Comments</h2>
+    <!-- comment section  -->
+    <div style="margin: 30px 0px; margin-left: 250px;">
+        <h2>Comments</h2>
         <form action="" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="content"></label>
                 <textarea class="form-control" name="comment" id="content" rows="5" placeholder="Provide some comments"
                     style="width: 60%;" required></textarea>
             </div>
-            <div class="form-group" style="margin: 30px 0px;">
+            <div style="margin: 30px 0px;">
                 <label for="Rating">Rating:</label>
-                <!-- <input type="text" class="form-control" name="rate" id="" aria-describedby="helpId" placeholder="1 to 5"
-                    style="width: 60%;"> -->
 
                 <select style="width: 200px" type="text" name="rate" placeholder='select your rating'>
                     <option value="1">1</option>
@@ -249,11 +193,11 @@ a:hover{
         }
         ?>
 
-        <div class="container" style="margin: 30px 0px;">
-            <h2 class="display-6">Comments:</h2>
+        <div style="margin: 30px 0px;">
+            <h2 >Comments:</h2>
         </div>
 
-        <!-- comment to start display -->
+        <!-- this is comment section -->
         <?php
         include '../config/connection.php';
         $query = "SELECT * FROM swimmingcomment ORDER BY rand() LIMIT 5";
@@ -266,10 +210,10 @@ a:hover{
             $rate = $row['rate'];
             ?>
 
-            <div class="container">
-                <div class="row" style="margin: 40px 0px; margin-top: -20px;">
-                    <div class="col-sm-8">
-                        <div class="username"
+            <div>
+                <div style="margin: 40px 0px; margin-top: -20px;">
+                    <div>
+                        <div
                             style="text-transform:uppercase; font-size: 16px; font-weight: bold; color: #740083;">
                             <?php echo $username; ?>
 
@@ -282,19 +226,18 @@ a:hover{
                                 }
                             }
                             ?>
-                        </div>
-                        <div class="date" style="font-size: 12px; color: #808080;">
+                        </divstyle="font-size: 12px; color: #808080;">
                             <?php echo $date; ?>
                         </div>
                     </div>
-                    <div class="col-sm-8">
-                        <div class="comment" style="font-size: 15px;">
+                    <div>
+                        <div  style="font-size: 15px;">
                             <?php echo $comment; ?>
                         </div>
 
                     </div>
-                    <div class="col-sm-6">
-                        <div class="actions">
+                    <div >
+                        <div>
                         <a style="color: dodgerblue" href="../editcomment.php?id=<?php echo $comment_id; ?>&table=swimmingcomment&redirect=<?php echo urlencode('broadcast/swimming.php'); ?>" class="edit">Edit</a>
                             <a style="color: #dc2626" href="../deletecomment.php?id=<?php echo $comment_id; ?>&table=swimmingcomment&redirect=<?php echo urlencode('broadcast/swimming.php'); ?>" class="delete">Delete</a>
                         </div>
@@ -315,4 +258,6 @@ a:hover{
 
         </div>
         
-     
+        </body> 
+
+        </html>

@@ -3,33 +3,33 @@ session_start();
     include('config/connection.php');
 
     if (isset($_POST["login"])) {
-        $username = mysqli_real_escape_string($conn, trim($_POST['username']));
-        $password = trim($_POST['password']);
+        $user_name = mysqli_real_escape_string($conn, trim($_POST['username']));
+        $user_password = trim($_POST['password']);
     
-        if (empty($username) && empty($password)) {
-            $login_error = '<p style="text-align: center; color: #FF0000; margin-right: 150px; font-size: 16px;"><i class="fas fa-exclamation-circle"></i> Please enter both username and password.</p>';
-        } elseif (empty($username)) {
-            $login_error = '<p style="text-align: center; color: #FF0000; margin-right: 240px; font-size: 16px;"><i class="fas fa-exclamation-circle"></i> Please enter your username.</p>';
-        } elseif (empty($password)) {
-            $login_error = '<p style="text-align: center; color: #FF0000; margin-right: 240px; font-size: 16px;"><i class="fas fa-exclamation-circle"></i> Please enter your password.</p>';
+        if (empty($user_name) && empty($user_password)) {
+            $login_error = '<p style="text-align: center; color: #dc2626; margin-right: 150px; font-size: 16px;"> Please enter username and password.</p>';
+        } elseif (empty($user_name)) {
+            $login_error = '<p style="text-align: center; color: #dc2626; margin-right: 240px; font-size: 16px;"> Please enter your username.</p>';
+        } elseif (empty($user_password)) {
+            $login_error = '<p style="text-align: center; color: #dc2626; margin-right: 240px; font-size: 16px;"> Please enter your password.</p>';
         } else {
 
               // this is default admin login details
         $default_admin_username = "admin";
         $default_admin_password = "password";
 
-        if ($username === $default_admin_username && $password === $default_admin_password) {
-            $_SESSION['username'] = $username;
+        if ($user_name === $default_admin_username && $user_password === $default_admin_password) {
+            $_SESSION['username'] = $user_name;
             header("Location: admin/main.php");
             exit();
 
         } else {
 
             // login authentication
-            $sql = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE username = '$user_name'");
             $count = mysqli_num_rows($sql);
     
-                $sql1 = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+                $sql1 = mysqli_query($conn, "SELECT * FROM users WHERE username = '$user_name'");
                 $checker = mysqli_num_rows($sql1);
     
                 if ($checker > 0) {
@@ -38,8 +38,8 @@ session_start();
     
                     if ($getter["status"] == 0) {
                         $login_error = '<p style="text-align: center; color: #FF0000; margin-right: 100px; font-size: 16px;"><i class="fas fa-exclamation-circle"></i> Please verify your email account before logging in.</p>';
-                    } elseif (password_verify($password, $hashpassword1)) {
-                        $_SESSION['username'] = $username;
+                    } elseif (password_verify($user_password, $hashpassword1)) {
+                        $_SESSION['username'] = $user_name;
                         echo '<script> alert("Login Successfully");
                         window.location.href = "home.php";
                         </script>';
@@ -90,11 +90,11 @@ session_start();
                         var response = xhr.responseText;
 
                         if (response === "success") {
-                            // Captcha is correct, proceed with form submission
+                            // to proceed login if captcha is correct
                             alert("Login Successful");
                         } else {
-                            // Captcha is incorrect, prevent form submission
-                            alert("Incorrect Captcha. Please try again.");
+                            // to stop form submit if captcha is incorrect
+                            alert("captcha login failed. please try again");
                             event.preventDefault();
                         }
                     }

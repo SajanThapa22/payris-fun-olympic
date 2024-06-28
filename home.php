@@ -121,7 +121,7 @@ ul{
 
         <ul style="display:flex;align-items:center;">
         
-          <li style="background-color: #dc2626;padding: 8px 20px; border-radius: 30px"> <a style="color: white;" onclick="return confirm('Are You sure want to Logout??');href="logout.php">
+          <li style="background-color: #dc2626;padding: 8px 20px; border-radius: 30px"> <a style="color: white;" onclick="return confirm('Are You sure want to Logout??');href="user-logout.php">
               Log out</a>
           </li>
         </ul>
