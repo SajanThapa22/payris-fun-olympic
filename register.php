@@ -3,19 +3,19 @@
 include('config/connection.php');
 
 if (isset($_POST["register"])) {
-    $fullname = $_POST["fullname"];
+    $user_fullname = $_POST["fullname"];
     $username = $_POST["username"];
-    $email = $_POST["email"];
+    $user_email = $_POST["email"];
     $phone_number = $_POST["phone_number"];
-    $country = $_POST["country"];
+    $nation = $_POST["country"];
     $sports = $_POST["sports"];
-    $password = $_POST["password"];
+    $user_password = $_POST["password"];
     $role = $_POST["role"];
 
-    $check_query = mysqli_query($conn, "SELECT * FROM users where email ='$email'");
+    $check_query = mysqli_query($conn, "SELECT * FROM users where email ='$user_email'");
     $rowCount = mysqli_num_rows($check_query);
 
-    if (!empty($email) && !empty($password)) {
+    if (!empty($user_email) && !empty($user_password)) {
         if ($rowCount > 0) {
             ?>
             <script>
@@ -23,15 +23,15 @@ if (isset($_POST["register"])) {
             </script>
             <?php
         } else {
-            $password_hash = password_hash($password, PASSWORD_BCRYPT);
+            $user_password_hash = password_hash($user_password, PASSWORD_BCRYPT);
 
             $result = mysqli_query($conn, "INSERT INTO users (fullname, username, email, phone_number, country, sports, password,  status) VALUES
-                ('$fullname','$username', '$email','$phone_number', '$country', '$sports', '$password_hash', 0)");
+                ('$user_fullname','$username', '$user_email','$phone_number', '$country', '$sports', '$user_password_hash', 0)");
 
             if ($result) {
                 $otp = rand(100000, 999999);
                 $_SESSION['otp'] = $otp;
-                $_SESSION['mail'] = $email;
+                $_SESSION['mail'] = $user_email;
                 require "Mail/phpmailer/PHPMailerAutoload.php";
                 $mail = new PHPMailer;
 
@@ -50,7 +50,7 @@ if (isset($_POST["register"])) {
 
                 $mail->isHTML(true);
                 $mail->Subject = "Your verify code";
-                $mail->Body = "<p>Dear user, </p> <h3>Your verify Verification code is $otp <br></h3>
+                $mail->Body = "<p>Dear user, </p> <h3>Your verification code for FunOlympics is $otp <br></h3>
                     <br><br>
                     <p>With regrads,</p>";
 
@@ -63,7 +63,7 @@ if (isset($_POST["register"])) {
                 } else {
                     ?>
                     <script>
-                        alert("<?php echo "Register Successfully, Verification code sent to " . $email ?>");
+                        alert("<?php echo "Register Successfully, Verification code sent to " . $user_email ?>");
                         window.location.replace('verification.php');
                     </script>
                     <?php
