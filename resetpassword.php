@@ -12,37 +12,30 @@ include 'config/connection.php';
 <body style="background-color: #efefef; padding: 200px">
 
     
-    <main style="background-color: #fff;" class="login-form">
+    <main style="background-color: #fff;">
         <div class="cotainer">
-            <div style="padding-top:30px" class="row justify-content-center">
-                <div class="col-md-6">
+            <div style="padding-top:30px" >
+                <div>
                     <div style="border-radius: 15px;over-flow:hidden">
                         <div style="padding: 15px;  color: white; font-size: 18px;background-color: #dc2626;text-align: center">
-                            <strong>Change Password</strong>
+                           Change Password
                         </div>
-                        <div class="card-body">
-                            <form action="#" method="POST" name="login">
-                                <div class="form-group row">
+                        <div>
+                            <form  method="POST" name="login">
+                                <div>
                                     <p style="font-size: 16px; color: #808080;">Please enter you new password</p>
-                                    <div class="col-md-12">
-                                        <label for="password" class="col-md-4 col-form-label text-md-right">New
+                                    <div>
+                                        <label for="password">New
                                             Password:</label>
-                                        <input type="password" id="password" class="form-control"
-                                            placeholder="Enter new password" name="password" required autofocus>
+                                        <input type="password" id="password" 
+                                            placeholder="Enter your new password" name="password" required>
                                     </div>
-                                    <br><br><br><br>
-                                    <div class="col-md-12">
+                                    <div>
                                         <label for="confirm_password"
-                                            class="col-md-4 col-form-label text-md-right">Confirm Password:</label>
-                                        <input type="password" id="confirm_password" class="form-control"
+                                            >Confirm Password:</label>
+                                        <input type="password" id="confirm_password"
                                             placeholder="Confirm new password" name="confirm_password" required
                                             autofocus>
-                                        <i id="password_match_icon" class="bi bi-check-circle-fill"
-                                            style="display: none; color: green; margin-top: 10px;">Password match
-                                            correctly.</i>
-                                        <i id="password_error" class="bi bi-exclamation-circle-fill"
-                                            style="display: none; color: red; margin-top: 10px;">Password donot
-                                            match.</i>
                                     </div>
 
                                     
@@ -66,23 +59,23 @@ include 'config/connection.php';
 <?php
     if(isset($_POST["reset"])){
         include 'config/connection.php';
-        $psw = $_POST["password"];
+        $pass = $_POST["password"];
 
-        $token = $_SESSION['token']; 
-        $email = $_SESSION['email'];
+        $r_token = $_SESSION['token']; 
+        $user_email = $_SESSION['email'];
 
-        $hash = password_hash( $psw , PASSWORD_DEFAULT );
+        $pw_hash = password_hash( $pass , PASSWORD_DEFAULT );
 
-        $sql = mysqli_query($conn, "SELECT * FROM users WHERE email='$email'");
-        $query = mysqli_num_rows($sql);
-  	    $fetch = mysqli_fetch_assoc($sql);
+        $db_sql = mysqli_query($conn, "SELECT * FROM users WHERE email='$user_email'");
+        $query = mysqli_num_rows($db_sql);
+  	    $get = mysqli_fetch_assoc($db_sql);
 
-        if($email){
-            $new_pass = $hash;
-            mysqli_query($conn, "UPDATE users SET password='$new_pass' WHERE email='$email'");
+        if($user_email){
+            $new_pw = $pw_hash;
+            mysqli_query($conn, "UPDATE users SET password='$new_pw' WHERE email='$user_email'");
             ?>
 <script>
-alert("<?php echo "Your password has been succesfully reset"?>");
+alert("<?php echo "Your password is reset successfully. you may login now"?>");
 window.location.replace("login.php");
 
 </script>
@@ -90,7 +83,7 @@ window.location.replace("login.php");
         }else{
             ?>
 <script>
-alert("<?php echo "Please try again"?>");
+alert("<?php echo "error occured. Please try again"?>");
 </script>
 <?php
         }

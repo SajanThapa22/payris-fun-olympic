@@ -2,8 +2,8 @@
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="funOlympics.sql";
-$conn=mysqli_connect($servername,$username,$password,$dbname);
+$database_name="../database/funOlympics.sql";
+$conn=mysqli_connect($servername,$username,$password,$database_name);
 ?>
 
 
