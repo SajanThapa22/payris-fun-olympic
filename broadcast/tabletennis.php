@@ -1,6 +1,4 @@
 
-
-
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
@@ -197,7 +195,7 @@ a:hover{
         ?>
 
         <div style="margin: 30px 0px;">
-            <h2 class="display-6">Comments:</h2>
+            <h2>Comments:</h2>
         </div>
 
         <!-- comment section -->

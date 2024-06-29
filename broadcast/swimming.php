@@ -146,9 +146,9 @@ a:hover{
     <div style="margin: 30px 0px; margin-left: 250px;">
         <h2>Comments</h2>
         <form action="" method="post" enctype="multipart/form-data">
-            <div class="form-group">
+            <div>
                 <label for="content"></label>
-                <textarea class="form-control" name="comment" id="content" rows="5" placeholder="Provide some comments"
+                <textarea name="comment" id="content" rows="5" placeholder="Provide some comments"
                     style="width: 60%;" required></textarea>
             </div>
             <div style="margin: 30px 0px;">
