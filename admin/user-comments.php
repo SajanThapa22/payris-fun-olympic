@@ -14,11 +14,11 @@ else
 <?php include 'admin_structure.php'; ?>
 
 <section>
-    <h1 class="heading" style="font-size: 30px; color: #333; margin-top: 20px; font-weight: bold;">User Comments</h1>
-    <div class="col-md-12 ">
+    <h1 style="font-size: 30px; color: #333; margin-top: 20px; font-weight: bold;">User Comments</h1>
+    <div >
         <p style="font-size: 16px">Boxing comments</p>
             <table style="font-size: 15px; border-radius: 15px; border-collapse: collapse; width: 100%; border: 1px solid #efefef;">
-                <thead class="bg-light text-dark">
+                <thead>
                     <tr>
                         <th>Comment ID</th>
                         <th>Username</th>
@@ -41,14 +41,14 @@ else
                     $d=$row['comment'];
                     $e=$row['rate'];
                 ?>
-                <tbody class="bg-white">
+                <tbody>
                     <tr>
                         <td scope="row"><?php echo $a; ?></td>
                         <td><?php echo $b; ?></td>
                         <td><?php echo $d; ?></td>
                         <td><?php echo $c; ?></td>
                         <td><?php echo $e; ?></td>
-                        <td><a class="btn bg-danger" href="comment-delete.php?Del=<?php echo $a; ?>&table=boxingcomment">Delete</a></td>
+                        <td><a style="padding: 15px 25px;border-radius: 30px;background-color: '#dc2626;color: white;" href="comment-delete.php?Del=<?php echo $a; ?>&table=boxingcomment">Delete</a></td>
 
                     </tr>
                 </tbody>
@@ -59,10 +59,10 @@ else
             </div>
 
 
-            <div style="margin-top: 50px" class="col-md-12">
+            <div style="margin-top: 50px">
         <p style="font-size: 16px">Table Tennis comments</p>
             <table style="font-size: 15px; border-radius: 15px; border-collapse: collapse; width: 100%; border: 1px solid #efefef;">
-                <thead class="bg-light text-dark">
+                <thead>
                     <tr>
                         <th>Comment ID</th>
                         <th>Username</th>
@@ -85,14 +85,14 @@ else
                     $d=$row['comment'];
                     $e=$row['rate'];
                 ?>
-                <tbody class="bg-white">
+                <tbody>
                     <tr>
                         <td scope="row"><?php echo $a; ?></td>
                         <td><?php echo $b; ?></td>
                         <td><?php echo $d; ?></td>
                         <td><?php echo $c; ?></td>
                         <td><?php echo $e; ?></td>
-                        <td><a class="btn bg-danger" href="comment-delete.php?Del=<?php echo $a; ?>&table=ttcomment">Delete</a></td>
+                        <td><a style="padding: 15px 25px;border-radius: 30px;background-color: '#dc2626;color: white;" href="comment-delete.php?Del=<?php echo $a; ?>&table=ttcomment">Delete</a></td>
 
                     </tr>
                 </tbody>
@@ -136,7 +136,7 @@ else
                         <td><?php echo $d; ?></td>
                         <td><?php echo $c; ?></td>
                         <td><?php echo $e; ?></td>
-                        <td><a class="btn bg-danger" href="comment-delete.php?Del=<?php echo $a; ?>&table=archerycomment">Delete</a></td>
+                        <td><a style="padding: 15px 25px;border-radius: 30px;background-color: '#dc2626;color: white;" href="comment-delete.php?Del=<?php echo $a; ?>&table=archerycomment">Delete</a></td>
 
                     </tr>
                 </tbody>
@@ -180,7 +180,7 @@ else
                         <td><?php echo $d; ?></td>
                         <td><?php echo $c; ?></td>
                         <td><?php echo $e; ?></td>
-                        <td><a class="btn bg-danger" href="comment-delete.php?Del=<?php echo $a; ?>&table=swimmingcomment">Delete</a></td>
+                        <td><a style="padding: 15px 25px;border-radius: 30px;background-color: '#dc2626;color: white;" href="comment-delete.php?Del=<?php echo $a; ?>&table=swimmingcomment">Delete</a></td>
 
                     </tr>
                 </tbody>

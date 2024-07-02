@@ -252,7 +252,7 @@ a:hover{
     </div>
 
 
-    <!-- ======= this is Footer ======= -->
+    <!-- ======= this is Footer section======= -->
     <footer>
         <p style="color:white"> Payris Fun Olympics 2024.</p>
         <p style="color:white">Copyright &copy; All rights reserved.</p>
