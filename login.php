@@ -14,7 +14,6 @@ session_start();
             $login_error = '<p style="text-align: center; color: #dc2626; margin-right: 240px; font-size: 16px;"> Please enter your password.</p>';
         } else {
 
-        // this is default admin login details
         $default_admin_username = "admin";
         $default_admin_password = "password";
 

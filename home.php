@@ -129,7 +129,6 @@ ul{
     </div>
 
   </nav>
-<!--this is navigation bar -->
 
  <!-- this is banner -->
  <div class="w-full h-screen overflow-hidden relative">
