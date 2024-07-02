@@ -111,7 +111,7 @@ window.location.replace("login.php");
             $mail->isHTML(true);
             $mail->Subject="Recover your password";
             $mail->Body="<b>Dear User</b>
-            <p>We just got notified to reset your password. please check your email to reset your password</p>
+            <p>We just got notified to reset your password. please check your email to reset your password</p>"
 
             if(!$mail->send()){
                 ?>
